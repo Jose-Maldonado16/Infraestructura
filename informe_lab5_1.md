@@ -35,7 +35,7 @@ network:
         - 10.124.88.186/24
       routes:
         - to: default
-          via: 10.250.16.1
+          via: 10.124.88.1
       nameservers:
         addresses:
           - 8.8.8.8
