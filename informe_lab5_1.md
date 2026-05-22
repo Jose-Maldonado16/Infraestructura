@@ -89,7 +89,7 @@ GRANT ALL PRIVILEGES ON lab51db.* TO 'appuser'@'10.124.88.183';
 FLUSH PRIVILEGES;
 ```
 
-![UFW status](capturas/1.jpg)
+![UFW status](capturas/1.png)
 
 ---
 
