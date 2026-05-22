@@ -104,8 +104,8 @@ openssl s_client -connect 10.124.88.186:443 -tls1_1 </dev/null
 
 Resultado esperado: TLS 1.2 funciona, TLS 1.1 rechazado.
 
-![TLS](capturas/2.jpg)
-![TLS](capturas/3.jpg)
+![TLS](capturas/2.png)
+![TLS](capturas/3.png)
 
 #### Prueba 2 — Cabeceras de seguridad desde VM Jose hacia Sebastian
 
@@ -115,7 +115,7 @@ curl -k -I https://10.124.88.186
 
 Resultado esperado: `Strict-Transport-Security` y `X-Frame-Options` presentes.
 
-![HTTPS](capturas/10.jpg)
+![HTTPS](capturas/10.png)
 
 #### Prueba 3 — Segmentación de red — Puerto 3306 debe fallar
 
@@ -127,7 +127,7 @@ nc -vz -w 2 10.124.88.186 3306
 
 Resultado esperado: `Connection timed out` o `No route to host` — UFW bloqueando correctamente.
 
-![3306](capturas/5.jpg)
+![3306](capturas/5.png)
 
 #### Prueba 4 — SSH ofuscado desde VM Jose hacia Sebastian
 
@@ -143,8 +143,8 @@ Puerto 2222 debe funcionar:
 ssh -p 2222 sebas@10.124.88.186
 ```
 
-![SSH](capturas/6.jpg)
-![SSH](capturas/7.jpg)
+![SSH](capturas/6.png)
+![SSH](capturas/7.png)
 
 #### Prueba 5 — TLS desde VM Sebastian hacia Jose
 
@@ -159,7 +159,7 @@ openssl s_client -connect 10.124.88.183:443 -tls1_1 </dev/null
 curl -k -I https://10.124.88.183
 ```
 
-![HTTPS](capturas/11.jpg)
+![HTTPS](capturas/11.png)
 
 #### Prueba 7 — SSH ofuscado desde VM Sebastian hacia Jose
 
@@ -175,8 +175,8 @@ Puerto 2222 debe funcionar:
 ssh -p 2222 maldonado-jose@10.124.88.183
 ```
 
-![SHH](capturas/8.jpg)
-![SHH](capturas/9.jpg)
+![SHH](capturas/8.png)
+![SHH](capturas/9.png)
 
 ---
 
